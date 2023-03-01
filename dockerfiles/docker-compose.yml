@@ -4,6 +4,7 @@ services:
   fuseki:
     container_name: skosmos-fuseki
     hostname: fuseki
+    user: root
     image: atomgraph/fuseki
     ports:
       - 9030:3030
