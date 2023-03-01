@@ -11,6 +11,9 @@ services:
       - JAVA_OPTIONS=-Xmx8G -Xms8G
     volumes:
       - ./config/skosmos.ttl:/fuseki/configuration/skosmos.ttl:ro
+      - type: bind
+        source: ./databases
+        target: /fuseki/databases
     command: [ "--config", "/fuseki/configuration/skosmos.ttl" ]
   fuseki-cache:
     container_name: skosmos-fuseki-cache
