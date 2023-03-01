@@ -12,7 +12,6 @@ services:
     volumes:
       - ./config/skosmos.ttl:/fuseki/configuration/skosmos.ttl:ro
     command: [ "--config", "/fuseki/configuration/skosmos.ttl" ]
-
   fuseki-cache:
     container_name: skosmos-fuseki-cache
     hostname: fuseki-cache
@@ -23,7 +22,6 @@ services:
       - type: bind
         source: ./config/varnish-default.vcl
         target: /etc/varnish/default.vcl
-
   skosmos:
     container_name: skosmos-web
     hostname: skosmos
