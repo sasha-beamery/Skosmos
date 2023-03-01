@@ -9,7 +9,7 @@ services:
     ports:
       - 9030:3030
     environment:
-      - JAVA_OPTIONS=-Xmx8G -Xms8G
+      - JAVA_OPTIONS=-Xmx16G -Xms16G
     volumes:
       - ./config/skosmos.ttl:/fuseki/configuration/skosmos.ttl:ro
       - type: bind
