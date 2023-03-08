@@ -34,7 +34,7 @@ services:
     ports:
       - 9090:80
     depends_on:
-      - fuseki
+      - virtuoso
       - fuseki-cache
     volumes:
       - type: bind
