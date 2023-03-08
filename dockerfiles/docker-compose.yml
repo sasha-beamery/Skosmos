@@ -14,7 +14,7 @@ services:
         source: ./databases
         target: /fuseki/databases
     ports:
-      - "9030:8890"
+      - 9030:8890
   fuseki-cache:
     container_name: skosmos-fuseki-cache
     hostname: fuseki-cache

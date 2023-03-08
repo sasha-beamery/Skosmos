@@ -2,7 +2,7 @@ vcl 4.0;
 
 backend default {
     .host = "virtuoso";
-    .port = "9030";
+    .port = "8890";
 }
 
 sub vcl_backend_response {
