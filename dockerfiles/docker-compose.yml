@@ -9,15 +9,16 @@ services:
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://www.example.com/my-graph"
+      VIRT_Parameters_TraceOn: "client_sql" # logs queries
     volumes:
       - type: bind
         source: ./databases
-        target: /fuseki/databases
+        target: /data
     ports:
       - 9030:8890
-  fuseki-cache:
-    container_name: skosmos-fuseki-cache
-    hostname: fuseki-cache
+  cache:
+    container_name: cache
+    hostname: cache
     image: varnish
     ports:
       - 9031:80
@@ -35,6 +36,7 @@ services:
       - 9090:80
     depends_on:
       - virtuoso
+      - cache
     volumes:
       - type: bind
         source: ./config/config-docker-compose.ttl

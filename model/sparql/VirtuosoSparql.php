@@ -1,7 +1,6 @@
 <?php
 
-// Added this file based on this conversation - https://groups.google.com/g/skosmos-users/c/OsAFT_OINb8/m/whltsKQ9BwAJ. It requires a change in the config - switch "Generic"
-
+// Added this file based on this conversation - https://groups.google.com/g/skosmos-users/c/OsAFT_OINb8/m/whltsKQ9BwAJ. It requires a change in the config - switch "Generic" to "Virtuoso"
 
 // @codeCoverageIgnore
 
