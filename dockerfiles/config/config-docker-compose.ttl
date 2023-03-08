@@ -95,6 +95,17 @@
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills> ;
     skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills#this> .
 
+:skill-types a skosmos:Vocabulary, void:Dataset ;
+    dc:title "Beamery skill type taxonomy"@en ;
+    skosmos:shortName "skill types";
+    dc:subject :cat_general ;
+    void:uriSpace "https://www.beamery.com/taxonomies/skills/types/";
+    skosmos:language "en";
+    skosmos:defaultLanguage "en";
+    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills/types/> ;
+    skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills/types#this> .
+
 :roles a skosmos:Vocabulary, void:Dataset ;
     dc:title "Beamery roles taxonomy"@en ;
     skosmos:shortName "roles";
