@@ -1,21 +1,6 @@
 version: '3.7'
 
 services:
-#  fuseki:
-#    container_name: skosmos-fuseki
-#    hostname: fuseki
-#    user: root
-#    image: atomgraph/fuseki
-#    ports:
-#      - 9030:3030
-#    environment:
-#      - JAVA_OPTIONS=-Xmx16G -Xms16G
-#    volumes:
-#      - ./config/skosmos.ttl:/fuseki/configuration/skosmos.ttl:ro
-#      - type: bind
-#        source: ./databases
-#        target: /fuseki/databases
-#    command: [ "--config", "/fuseki/configuration/skosmos.ttl" ]
   virtuoso:
     container_name: skosmos-fuseki
     hostname: fuseki
@@ -30,7 +15,6 @@ services:
         target: /fuseki/databases
     ports:
       - "9030:8890"
-
   fuseki-cache:
     container_name: skosmos-fuseki-cache
     hostname: fuseki-cache
