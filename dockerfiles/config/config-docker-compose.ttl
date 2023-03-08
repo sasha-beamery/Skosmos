@@ -21,7 +21,7 @@
     skosmos:sparqlEndpoint <http://localhost:9030/sparql> ;
     # sparql-query extension, or "Generic" for plain SPARQL 1.1
     # set to "JenaText" instead if you use Fuseki with jena-text index
-    skosmos:sparqlDialect "Virtuoso" ;
+    skosmos:sparqlDialect "Generic" ;
     # whether to enable collation in sparql queries
     skosmos:sparqlCollationEnabled false ;
     # HTTP client configuration
