@@ -9,7 +9,7 @@ services:
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://www.example.com/my-graph"
-      VIRT_Parameters_TraceOn: "client_sql" # logs queries
+      VIRT_Parameters_TraceOn: "exec" # logs queries
     volumes:
       - type: bind
         source: ./databases
