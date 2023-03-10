@@ -1,24 +1,23 @@
 version: '3.7'
 
 services:
-  fuseki:
-    container_name: skosmos-fuseki
-    hostname: fuseki
+  virtuoso:
+    container_name: virtuoso
+    hostname: virtuoso
     user: root
-    image: atomgraph/fuseki
-    ports:
-      - 9030:3030
+    image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
     environment:
-      - JAVA_OPTIONS=-Xmx16G -Xms16G
+      DEFAULT_GRAPH: "http://www.example.com/my-graph"
+      VIRT_Parameters_TraceOn: "exec" # enhanced logging
     volumes:
-      - ./config/skosmos.ttl:/fuseki/configuration/skosmos.ttl:ro
       - type: bind
         source: ./databases
-        target: /fuseki/databases
-    command: [ "--config", "/fuseki/configuration/skosmos.ttl" ]
-  fuseki-cache:
-    container_name: skosmos-fuseki-cache
-    hostname: fuseki-cache
+        target: /data
+    ports:
+      - 9030:8890
+  cache:
+    container_name: cache
+    hostname: cache
     image: varnish
     ports:
       - 9031:80
@@ -35,8 +34,8 @@ services:
     ports:
       - 9090:80
     depends_on:
-      - fuseki
-      - fuseki-cache
+      - virtuoso
+      - cache
     volumes:
       - type: bind
         source: ./config/config-docker-compose.ttl
