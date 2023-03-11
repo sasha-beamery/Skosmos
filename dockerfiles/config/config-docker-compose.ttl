@@ -102,7 +102,7 @@
     void:uriSpace "https://www.beamery.com/taxonomies/skills/types/";
     skosmos:language "en";
     skosmos:defaultLanguage "en";
-    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:sparqlEndpoint <http://cache:80/sparql> ;
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills/types/> ;
     skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills/types#this> .
 
