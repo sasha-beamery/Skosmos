@@ -1,8 +1,8 @@
 vcl 4.0;
 
 backend default {
-    .host = "fuseki";
-    .port = "3030";
+    .host = "virtuoso";
+    .port = "8890";
 }
 
 sub vcl_backend_response {

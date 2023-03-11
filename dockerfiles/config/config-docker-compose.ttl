@@ -18,10 +18,10 @@
 :config a skosmos:Configuration ;
     # SPARQL endpoint
     # a local Fuseki server is usually on localhost:3030
-    skosmos:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    skosmos:sparqlEndpoint <http://cache:80/sparql> ;
     # sparql-query extension, or "Generic" for plain SPARQL 1.1
     # set to "JenaText" instead if you use Fuseki with jena-text index
-    # skosmos:sparqlDialect "JenaText" ;
+    skosmos:sparqlDialect "Virtuoso" ;
     # whether to enable collation in sparql queries
     skosmos:sparqlCollationEnabled false ;
     # HTTP client configuration
@@ -91,7 +91,7 @@
     void:uriSpace "https://www.beamery.com/taxonomies/skills/";
     skosmos:language "en";
     skosmos:defaultLanguage "en";
-    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:sparqlEndpoint <http://cache:80/sparql> ;
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills> ;
     skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills#this> .
 
@@ -113,6 +113,6 @@
     void:uriSpace "https://www.beamery.com/taxonomies/roles/";
     skosmos:language "en";
     skosmos:defaultLanguage "en";
-    void:sparqlEndpoint <http://fuseki-cache:80/skosmos/sparql> ;
+    void:sparqlEndpoint <http://cache:80/sparql> ;
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/roles> ;
     skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/roles#this> .
