@@ -89,22 +89,13 @@
     skosmos:shortName "skills";
     dc:subject :cat_general ;
     void:uriSpace "https://www.beamery.com/taxonomies/skills/";
-    skosmos:language "en";
+    skosmos:language "en", "de", "es", "fr";
     skosmos:defaultLanguage "en";
     void:sparqlEndpoint <http://cache:80/sparql> ;
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills> ;
+    skosmos:groupClass skos:Collection ;
+    skosmos:showTopConcepts true ;
     skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills#this> .
-
-:skill-types a skosmos:Vocabulary, void:Dataset ;
-    dc:title "Beamery skill type taxonomy"@en ;
-    skosmos:shortName "skill types";
-    dc:subject :cat_general ;
-    void:uriSpace "https://www.beamery.com/taxonomies/skills/types/";
-    skosmos:language "en";
-    skosmos:defaultLanguage "en";
-    void:sparqlEndpoint <http://cache:80/sparql> ;
-    skosmos:sparqlGraph <https://www.beamery.com/taxonomies/skills/types/> ;
-    skosmos:mainConceptScheme <https://www.beamery.com/taxonomies/skills/types#this> .
 
 :roles a skosmos:Vocabulary, void:Dataset ;
     dc:title "Beamery roles taxonomy"@en ;
