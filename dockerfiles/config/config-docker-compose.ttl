@@ -102,7 +102,7 @@
     skosmos:shortName "roles";
     dc:subject :cat_general ;
     void:uriSpace "https://www.beamery.com/taxonomies/roles/";
-    skosmos:language "en";
+    skosmos:language "en", "de", "es", "fr";
     skosmos:defaultLanguage "en";
     void:sparqlEndpoint <http://cache:80/sparql> ;
     skosmos:sparqlGraph <https://www.beamery.com/taxonomies/roles> ;
