@@ -22,7 +22,7 @@ services:
     ports:
       - 9031:80
     volumes:
-      - type: volume
+      - type: bind
         source: taxonomy-config/varnish-default.vcl
         target: /etc/varnish/default.vcl
   skosmos:
