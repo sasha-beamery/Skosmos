@@ -11,7 +11,7 @@ services:
       VIRT_Parameters_TraceOn: "exec" # enhanced logging
     volumes:
       - type: bind
-        source: ./databases
+        source: taxonomy-databases
         target: /data
     ports:
       - 9030:8890
