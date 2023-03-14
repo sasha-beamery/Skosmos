@@ -22,7 +22,6 @@ services:
     ports:
       - 9031:80
     volumes:
-      - type: bind
         source: ./config/varnish-default.vcl
         target: /etc/varnish/default.vcl
   skosmos:
