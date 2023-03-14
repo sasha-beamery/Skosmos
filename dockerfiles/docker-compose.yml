@@ -22,7 +22,8 @@ services:
     ports:
       - 9031:80
     volumes:
-      - source: ./config/varnish-default.vcl
+      - type: volume
+        source: ./config/varnish-default.vcl
         target: /etc/varnish/default.vcl
   skosmos:
     container_name: skosmos-web
